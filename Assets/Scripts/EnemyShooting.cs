@@ -33,7 +33,8 @@ public class EnemyShooting : MonoBehaviour {
 
 		cooldownTimer -= Time.deltaTime;
 		
-		if( cooldownTimer <= 0 && player != null && Vector3.Distance(transform.position, player.position) < 4) {
+		if( cooldownTimer <= 0 && player != null /*&& Vector3.Distance(transform.position, player.position) < 4*/)
+        {
 			// SHOOT!
 			//Debug.Log ("Enemy Pew!");
 			cooldownTimer = fireDelay;
