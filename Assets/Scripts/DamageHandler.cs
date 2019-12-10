@@ -6,7 +6,14 @@ public class DamageHandler : MonoBehaviour {
 	public int health = 1;
 
 	public float invulnPeriod = 0;
-	float invulnTimer = 0;
+
+    public AudioClip DeadSFX;
+    public bool bIsBullet;
+    public Sprite explosionSprite;
+    private AudioSource source;
+    private bool bIsDying;
+
+    float invulnTimer = 0;
 	int correctLayer;
 
 	SpriteRenderer spriteRend;
@@ -17,8 +24,9 @@ public class DamageHandler : MonoBehaviour {
 		// NOTE!  This only get the renderer on the parent object.
 		// In other words, it doesn't work for children. I.E. "enemy01"
 		spriteRend = GetComponent<SpriteRenderer>();
+        source = GetComponent<AudioSource>();
 
-		if(spriteRend == null) {
+        if (spriteRend == null) {
 			spriteRend = transform.GetComponentInChildren<SpriteRenderer>();
 
 			if(spriteRend==null) {
@@ -60,7 +68,18 @@ public class DamageHandler : MonoBehaviour {
 	}
 
 	void Die() {
-		Destroy(gameObject);
+        if(bIsBullet)
+        {
+            Destroy(gameObject);
+        }
+        else if(!bIsDying && !bIsBullet)
+        {
+            source.PlayOneShot(DeadSFX);
+            Destroy(gameObject, 0.2f);
+            bIsDying = true;
+            spriteRend.sprite = explosionSprite;
+        }
+        transform.Rotate(0.0f, 0.0f, 5.0f);
 	}
 
 }

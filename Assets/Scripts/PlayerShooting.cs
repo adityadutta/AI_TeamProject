@@ -6,13 +6,16 @@ public class PlayerShooting : MonoBehaviour {
 	public Vector3 bulletOffset = new Vector3(0, 0.5f, 0);
 
 	public GameObject bulletPrefab;
-	int bulletLayer;
+    public AudioClip ShootSFX;
+    private AudioSource source;
+    int bulletLayer;
 
 	public float fireDelay = 0.25f;
 	float cooldownTimer = 0;
 
 	void Start() {
-		bulletLayer = gameObject.layer;
+        source = GetComponent<AudioSource>();
+        bulletLayer = gameObject.layer;
 	}
 
 	// Update is called once per frame
@@ -27,6 +30,8 @@ public class PlayerShooting : MonoBehaviour {
 
 			GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
 			bulletGO.layer = bulletLayer;
-		}
+            source.clip = ShootSFX;
+            source.Play(0);
+        }
 	}
 }

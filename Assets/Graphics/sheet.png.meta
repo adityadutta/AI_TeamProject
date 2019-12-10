@@ -23,6 +23,12 @@ TextureImporter:
   - first:
       213: 364093396588394500
     second: bullet2
+  - first:
+      213: 4038727865685325579
+    second: explosion
+  - first:
+      213: 7586680352296567400
+    second: playerExplosion
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -229,7 +235,7 @@ TextureImporter:
         width: 9
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,6 +243,48 @@ TextureImporter:
       bones: []
       spriteID: c03c441fe48c9cb4f804ae3ff8702b7c
       internalID: 364093396588394500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 17
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3caba9aec8e9a4491219afdd2ef5d9
+      internalID: 4038727865685325579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerExplosion
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 338
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dab6b6724d01a64d8fe2e4417b43174
+      internalID: 7586680352296567400
       vertices: []
       indices: 
       edges: []
