@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4285084089665997682}
   - component: {fileID: 1933145006}
   m_Layer: 9
-  m_Name: Enemy02
+  m_Name: Enemy01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,14 +120,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84c2ca45a7cf834ca56d67e094bae08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxYSpeed: 1
-  maxXSpeed: 2
+  maxYSpeed: 2
+  maxXSpeed: 1
   xMin: -8.5
   xMax: 8.5
   yMin: -6.5
   yMax: 6
-  timeRangemin: 0.5
-  timeRangeMax: 2
+  timeRangemin: 3
+  timeRangeMax: 5
 --- !u!114 &1933145006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletOffset: {x: 0, y: 0.5, z: 0}
-  bulletPrefab: {fileID: 956121688337696837, guid: 83fd3af6ecf5459408e137fca4100d23,
+  bulletPrefab: {fileID: 956121688337696837, guid: 30465135738c78946916a60045d415d3,
     type: 3}
   fireDelay: 1.5
 --- !u!1 &8356676717965301584
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 919061581814599923}
   - component: {fileID: 1297331779843484326}
   m_Layer: 0
-  m_Name: Enemy02
+  m_Name: Enemy01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,8 +213,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6530179738444782934, guid: d13278a0727d32d40b20969211348cb9,
-    type: 3}
+  m_Sprite: {fileID: 21300002, guid: d13278a0727d32d40b20969211348cb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -148,7 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletOffset: {x: 0, y: 1, z: 0}
-  bulletPrefab: {fileID: 100000, guid: 0af73a4a8c7ba3a49a3686987e705780, type: 3}
+  bulletPrefab: {fileID: 5051211951344929329, guid: 0af73a4a8c7ba3a49a3686987e705780,
+    type: 3}
   fireDelay: 0.25
 --- !u!61 &-5172593417147382013
 BoxCollider2D:

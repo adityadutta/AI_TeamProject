@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6189860950671918049}
   - component: {fileID: 3870564444759220233}
   - component: {fileID: 250316594773630606}
-  - component: {fileID: 7884231324984835602}
+  - component: {fileID: 5607410183512202062}
   m_Layer: 0
-  m_Name: BulletEnemy
+  m_Name: BulletEnemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: d13278a0727d32d40b20969211348cb9, type: 3}
+  m_Sprite: {fileID: 613435604629981061, guid: d13278a0727d32d40b20969211348cb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.09, y: 0.37}
+    oldSize: {x: 0.09, y: 0.36}
     newSize: {x: 0.09, y: 0.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5
---- !u!114 &7884231324984835602
+--- !u!114 &5607410183512202062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 956121688337696837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b84c2ca45a7cf834ca56d67e094bae08, type: 3}
+  m_Script: {fileID: 11500000, guid: 4fe0e358bf83af841834894294232477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 8
+  maxYSpeed: 5
