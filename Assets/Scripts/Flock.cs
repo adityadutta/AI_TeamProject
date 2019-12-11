@@ -13,10 +13,6 @@ public class Flock : MonoBehaviour
     GameObject[] obstacles;
     List<GameObject> obstacleList = new List<GameObject>();
 
-    public ObjectPooling objectPool;
-
-    public GameObject playerRef;
-
     // Use this for initialization
     void Start()
     {
@@ -29,7 +25,6 @@ public class Flock : MonoBehaviour
         {
             boid.SetActive(true);
             boid.GetComponent<Boid>().flock = this;
-            boid.GetComponent<Boid>().player = playerRef;
         }
 
         // obstacles

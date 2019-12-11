@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Boid : MonoBehaviour
 {
-    public GameObject player;
     public Vector3 velocity;
     public Vector3 acceleration = Vector3.zero;
     static float desiredSeparion = 1.5f;
@@ -225,21 +224,5 @@ public class Boid : MonoBehaviour
         }
 
         return steer;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Bullet")
-        {
-            if (player)
-            {
-                flock.objectPool.SpawnFromPool("Explosion", transform.position, Quaternion.identity);
-                //player.gameObject.GetComponent<Player>().AddScore(1);
-                Destroy(this.gameObject);
-                collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
-                collision.gameObject.SetActive(false);
-            }
-        }
-
     }
 }
