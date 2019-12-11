@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5051211951354626005}
   - component: {fileID: 1643396238101565477}
   - component: {fileID: -2032345315772687477}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bullet01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,6 +149,7 @@ MonoBehaviour:
   invulnPeriod: 0
   DeadSFX: {fileID: 0}
   bIsBullet: 1
+  explosionSprite: {fileID: 0}
 --- !u!114 &5051211951354626005
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerSpawner : MonoBehaviour {
 
 	public GameObject playerPrefab;
 	GameObject playerInstance;
+    public Text livesText;
+    public GameObject gameoverText;
 
 	public int numLives = 4;
 
@@ -30,15 +33,19 @@ public class PlayerSpawner : MonoBehaviour {
 				SpawnPlayer();
 			}
 		}
-	}
 
-	void OnGUI() {
-		if(numLives > 0 || playerInstance!= null) {
-			GUI.Label( new Rect(0, 0, 100, 50), "Lives Left: " + numLives);
-		}
-		else {
-			GUI.Label( new Rect( Screen.width/2 - 50 , Screen.height/2 - 25, 100, 50), "Game Over, Man!");
 
-		}
-	}
+
+        if (numLives > 0 || playerInstance != null)
+        {
+            livesText.text = "Lives left: " + numLives;
+        }
+        else
+        {
+            gameoverText.SetActive(true);
+
+        }
+
+
+    }
 }

@@ -16,6 +16,8 @@ public class MoveForwardShip : MonoBehaviour {
     private float timeRange;
     private float timer;
 
+    Vector3 velocity;
+
     private void Start()
     {
         timeRange = Random.Range(timeRangemin, timeRangeMax);
@@ -27,7 +29,7 @@ public class MoveForwardShip : MonoBehaviour {
 
         //Move ship forwards
         Vector3 pos = transform.position;
-        Vector3 velocity = new Vector3(maxXSpeed * Time.deltaTime, maxYSpeed * Time.deltaTime, 0);
+        velocity = new Vector3(maxXSpeed * Time.deltaTime, maxYSpeed * Time.deltaTime, 0);
         pos += transform.rotation * velocity;
         transform.position = pos;
 
@@ -68,4 +70,12 @@ public class MoveForwardShip : MonoBehaviour {
         timer = 0.0f;
         timeRange = Random.Range(timeRangemin, timeRangeMax);
     }
+
+
+    public Vector3 GetVelocity()
+    {
+        return velocity;
+    }
+
+
 }
