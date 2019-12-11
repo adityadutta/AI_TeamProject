@@ -17,11 +17,13 @@ public class MoveForwardShip : MonoBehaviour {
     private float timer;
 
     Vector3 velocity;
+    float counter;
 
     private void Start()
     {
         timeRange = Random.Range(timeRangemin, timeRangeMax);
         timer = 0.0f;
+        counter = Random.Range(1, 9);
     }
 
     // Update is called once per frame
@@ -29,7 +31,8 @@ public class MoveForwardShip : MonoBehaviour {
 
         //Move ship forwards
         Vector3 pos = transform.position;
-        velocity = new Vector3(maxXSpeed * Time.deltaTime, maxYSpeed * Time.deltaTime, 0);
+        float direction = maxXSpeed * (Mathf.PerlinNoise(Time.time * counter, 0.0f));
+        velocity = new Vector3(direction * Time.deltaTime, maxYSpeed * Time.deltaTime, 0);
         pos += transform.rotation * velocity;
         transform.position = pos;
 

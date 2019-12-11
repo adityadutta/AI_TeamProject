@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxYSpeed: 1
-  maxXSpeed: 2
+  maxXSpeed: 4
   xMin: -8.5
   xMax: 8.5
   yMin: -6.5
