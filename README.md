@@ -2,6 +2,6 @@
 
 AI techniques implemented:
 
-![](img/techniques.png)
+![](imgs/techniques.png)
 
-![](img/game.gif)
+![](imgs/game.gif)
